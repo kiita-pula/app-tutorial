@@ -14,7 +14,7 @@ app:
     source: https://github.com/monk-io/app-tutorial
   containers:
     app:
-      image: nooga/app-tutorial:latest
+      build: .
       environment: 
         - <- `DB_HOST=` connection-hostname("mongo") concat-all
         - <- `DB_PORT=` connection-port("mongo") concat-all
